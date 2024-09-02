@@ -30,8 +30,8 @@ function loadGame(importString) {
             alert("Error loading Game: " + e);
             return;
         }
-        game.rhoParticles = loadVal(E(obj.rhoParticles), E(0));
-        game.thetaEnergy = loadVal(E(obj.thetaEnergy), E(0));
+        game.number = loadVal(E(obj.number), E(0));
+        game.multiplier = loadVal(E(obj.multiplier), E(0));
     }
 }
 function onCreate()
