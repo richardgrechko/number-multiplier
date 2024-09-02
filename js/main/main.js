@@ -1,6 +1,6 @@
 var app = new Vue({
     el: "#app",
-    data: game,
+    data: tmp,
     computed: computed,
     methods: functions,
     created: onCreate
