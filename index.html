@@ -11,8 +11,8 @@
 <body>
     <div id="app">
         <p>Version: 1.1.1 β</p>
-        <p>You have <span class="big">{{ tmp.points }}</span> points.</p>
-        <p>(×<span class="big">{{ tmp.multiplier }}</span>/sec)</p>
+        <p>You have <span class="big">{{formatNumber(tmp.points, 4, 0, 1e10)}}</span> points.</p>
+        <p>(×<span class="big">{{formatNumber(tmp.multiplier, 4, 0, 1e10)}}</span>/sec)</p>
         <script src="js/format/ExpantaNum.js"></script>
         <script src="js/format/format.js"></script>
         <script src="js/main/main.js"></script>
