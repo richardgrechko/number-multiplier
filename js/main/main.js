@@ -41,9 +41,9 @@ let functions = {
 };
 let onCreate = function()
 {
-    initialGame = getSaveCode();
+    initialGame = functions.getSaveCode();
 
-    loadGame();
+    functions.loadGame();
 
-    requestAnimationFrame(update);
+    requestAnimationFrame(functions.update);
 }
