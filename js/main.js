@@ -39,9 +39,9 @@ let functions = {
         dt2 = Date.now();
         let dt = (dt2) / 1000;
         dt1 = Date.now();
-        let dt -= (dt1) / 1000;
+        dt -= (dt1) / 1000;
 
-        tmp.number = tmp.number.mul(tmp.multiplier.pow(1/dt));
+        tmp.number = tmp.number.mul(tmp.multiplier.pow(dt));
 
         requestAnimationFrame(update);
     }
