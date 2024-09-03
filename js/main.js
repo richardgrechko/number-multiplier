@@ -37,7 +37,7 @@ let functions = {
 
         tmp.number = tmp.number.mul(tmp.multiplier.pow(dt));
 
-        requestAnimationFrame(functions.update);
+        requestAnimationFrame(functions.update());
     },
     formatNumber: function(n, prec=4, prec1000=0, lim=E(10)) {
         n = E(n);
