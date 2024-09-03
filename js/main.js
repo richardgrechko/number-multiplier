@@ -1,9 +1,3 @@
-var app = new Vue({
-    el: "#app",
-    data: tmp,
-    methods: functions,
-    created: onCreate
-});
 let functions = {
     getSaveCode: function() {
         return btoa(unescape(encodeURIComponent(JSON.stringify(tmp))));
@@ -54,3 +48,9 @@ let onCreate = function()
 
     requestAnimationFrame(functions.update);
 }
+var app = new Vue({
+    el: "#app",
+    data: tmp,
+    methods: functions,
+    created: onCreate
+});
