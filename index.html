@@ -12,8 +12,8 @@
     <div id="app">
         <main>
             <p>Version: 1.1.1 β</p>
-            <p>You have <span class="big">{{formatNumber(tmp.points, 4, 0, 10)}}</span> points.</p>
-            <p>(×<span class="big">{{formatNumber(tmp.multiplier, 4, 0, 10)}}</span>/sec)</p>
+            <p>You have <span class="big" :class="formatNumber(tmp.points, 4, 0, 10)"></span> points.</p>
+            <p>(×<span class="big" :class="formatNumber(tmp.multiplier, 4, 0, 10)"></span>/sec)</p>
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
