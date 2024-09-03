@@ -1,11 +1,11 @@
 html {
   background-color: black;
   color: white;
-  font-size: 14px;
+  font-size: 24px;
 }
 span.big {
   background-color: black;
   color: white;
-  font-size: 18px;
+  font-size: 32px;
   font-weight: bold;
 }
