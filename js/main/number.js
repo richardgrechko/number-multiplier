@@ -5,5 +5,6 @@ tmp.multiplier = E(2);
 var app = new Vue({
     el: "#app",
     data: tmp,
-    methods: functions
+    methods: functions,
+    created: onCreate
 });
