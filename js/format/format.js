@@ -14,7 +14,7 @@ function formatNumber(n, prec=4, prec1000=0, lim=E(10)) {
     e = E(10).pow(log.sub(log.floor())).toFixed(prec) + "e" + log.floor();
   } else if (n.gte(1000)) {
     e = n.toFixed(prec1000);
-  } else if (n.gte(E(10).pow(-prec)) {
+  } else if (n.gte(E(10).pow(-prec))) {
     e = n.toFixed(prec)
   } else if (n.gte(0)) {
     e = 0;
