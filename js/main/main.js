@@ -31,8 +31,9 @@ let functions = {
     update: function()
     {
         dt2 = Date.now();
-        let dt = (dt2 - dt1) / 1000;
+        let dt = (dt2) / 1000;
         dt1 = Date.now();
+        let dt -= (dt1) / 1000;
 
         tmp.number = tmp.number.mul(tmp.multiplier.pow(1/dt));
 
