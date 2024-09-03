@@ -28,14 +28,6 @@ let functions = {
             tmp.multiplier = loadVal(E(obj.multiplier), E(0));
         }
     },
-    onCreate: function()
-    {
-        initialGame = getSaveCode();
-
-        loadGame();
-
-        requestAnimationFrame(update);
-    },
     update: function()
     {
         dt2 = Date.now();
@@ -47,3 +39,11 @@ let functions = {
         requestAnimationFrame(update);
     }
 };
+let onCreate = function()
+{
+    initialGame = getSaveCode();
+
+    loadGame();
+
+    requestAnimationFrame(update);
+}
