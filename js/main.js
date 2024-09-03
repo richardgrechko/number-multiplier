@@ -49,6 +49,7 @@ let functions = {
             let log = n.log10();
             e = "10^" + functions.formatNumber(log);
         } else if (n.gte(E(10).pow(lim))) {
+            let log = n.log10();
             e = E(10).pow(log.sub(log.floor())).toFixed(prec) + "e" + log.floor();
         } else if (n.gte(1000)) {
             e = n.toFixed(prec1000);
