@@ -1,4 +1,11 @@
 let tmp = {};
+var app = new Vue({
+    el: "#app",
+    data: tmp,
+    computed: computed,
+    methods: functions,
+    created: onCreate
+});
 tmp.FPS = E(60);
 tmp.number = E(1);
 tmp.multiplier = E(2);
