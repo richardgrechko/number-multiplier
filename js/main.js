@@ -30,13 +30,7 @@ let functions = {
     },
     update: function()
     {
-        dt2 = Date.now();
-        let dt = (dt2) / 1000;
-        dt1 = Date.now();
-        dt -= (dt1) / 1000;
-
-        tmp.number = tmp.number.mul(tmp.multiplier.pow(dt));
-
+        tmp.number = tmp.number.mul(tmp.multiplier.pow(0.016));
         requestAnimationFrame(functions.update());
     },
     formatNumber: function(n, prec=4, prec1000=0, lim=E(10)) {
