@@ -24,8 +24,8 @@ let functions = {
             alert("Error loading Game: " + e);
             return;
         }
-            tmp.number = loadVal(E(obj.number), E(0));
-            tmp.multiplier = loadVal(E(obj.multiplier), E(0));
+            tmp.number = loadVal(E(obj.number), E(1));
+            tmp.multiplier = loadVal(E(obj.multiplier), E(1.01));
         }
     },
     update: function()
