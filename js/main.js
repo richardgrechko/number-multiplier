@@ -20,7 +20,7 @@ const game = {
 let update = function()
 {
 	dt1 = Date.now();
-	let dt = (dt1-dt2)/1000;
+	let dt = (dt2-dt1)/1000;
 	dt2 = Date.now();
 	game.points = game.points.mul(game.gain.pow(dt));
 	if (game.points.gte(Number.MAX_VALUE))
