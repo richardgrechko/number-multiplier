@@ -10,4 +10,10 @@ Vue.component("upgrade", {
                 return this.upgrade.getPrice().lt(game.points);
             }
         },
+	template: `<button :disabled="!canAfford" @click="upgrade.buy()>
+<div>{{upgrade.name}}</div>
+<div>Lvl {{upgrade.level}}</div>
+<div>Currently ×{{formatNumber(upgrade.getMultiplier(), 4, 2, 303)}}</div>
+<div>Price: {{formatNumber(upgrade.getPrice(), 4, 2, 303)}}</div>
+</button>`
 });
