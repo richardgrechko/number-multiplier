@@ -3,7 +3,7 @@ function E(n)
 {
 	return new Decimal(n)
 }
-const tmp = {
+const game = {
 	points: E(1),
 	multiplier: E(1.01),
 	gain: E(0),
@@ -15,14 +15,14 @@ let update = function()
 	dt1 = Date.now();
 	dt = dt1-dt2;
 	dt2 = Date.now();
-	tmp.points = tmp.points.mul(tmp.gain.pow(dt));
-	if (tmp.points.gte(Number.MAX_VALUE))
+	game.points = game.points.mul(game.gain.pow(dt));
+	if (game.points.gte(Number.MAX_VALUE))
 	{
-		tmp.gain = tmp.multiplier.pow(E(1).div(tmp.points.log10().div(E(2).log10()).sub(1024)))
+		game.gain = game.multiplier.pow(E(1).div(game.points.log10().div(E(2).log10()).sub(1024)))
 	}
 	else
 	{
-		tmp.gain = tmp.multiplier
+		game.gain = game.multiplier
 	}
 	requestAnimationFrame(update);
 }
@@ -36,7 +36,7 @@ let onCreate = function()
 }
 var app = new Vue({
 	el: "#app",
-	data: tmp,
+	data: game,
 	methods: functions,
 	created: onCreate
 });
