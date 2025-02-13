@@ -44,6 +44,7 @@ let functions = {
 		{
 			a = abbrevs[0][n.sub(1)]
 		}
+		return a
 	},
 	formatNumber: function(n, prec=4, prec1000=2, lim=E(303))
 	{
@@ -59,7 +60,7 @@ let functions = {
 			let log = n.log10();
 			e = E(10).pow(log.sub(log.floor())).toFixed(prec1000) + "e" + log.floor();
 		} else if (n.gte(1000)) {
-			e = n.div(E(1000).log10().div(3).floor()).toFixed(prec1000) + functions.abbreviate(E(1000).log10().div(3).sub(1).floor());
+			e = n.div(E(1000).pow(E(1000).log10().div(3).floor())).toFixed(prec1000) + functions.abbreviate(E(1000).log10().div(3).sub(1).floor());
 		} else if (n.gte(E(10).pow(-prec))) {
 			e = n.toFixed(prec)
 		} else if (n.gte(0)) {
