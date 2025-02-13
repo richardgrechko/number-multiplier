@@ -62,7 +62,7 @@ let functions = {
 			e = "10^" + functions.formatNumber(log);
 		} else if (n.gte(E(10).pow(lim))) {
 			let log = n.log10();
-			e = E(10).pow(log.sub(log.floor())).toFixed(prec) + "e" + log.floor();
+			e = E(10).pow(log.sub(log.floor())).toFixed(prec1000) + "e" + log.floor();
 		} else if (n.gte(1000)) {
 			e = n.div(E(1000).log10().div(3).floor()).toFixed(prec1000) + functions.abbreviate(E(1000).log10().div(3).sub(1).floor());
 		} else if (n.gte(E(10).pow(-prec))) {
