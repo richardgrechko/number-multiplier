@@ -7,6 +7,12 @@ const game = {
 	points: E(1),
 	multiplier: E(1.01),
 	gain: E(0),
+	upgrades: [
+		new Upgrade("A little increase", 1.1, 1.02, 1.01),
+		new Upgrade("Increasing!", 1.5, 1.2, 1.1),
+		new Upgrade("Quickly Growing", 16, 4, 2),
+		new Upgrade("What?", 1048576, 4096, 128),
+	],
 	infinities: E(0),
 	brokenInfinity: false,
 }
