@@ -15,6 +15,7 @@ const game = {
 	],
 	infinities: E(0),
 	brokenInfinity: false,
+	gameWon: false,
 }
 let update = function()
 {
