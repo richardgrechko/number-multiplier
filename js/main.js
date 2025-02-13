@@ -1,4 +1,10 @@
 let dt, dt1, dt2;
+const tmp = {
+    number: E(1),
+    multiplier: E(1.01),
+    infinities: E(0),
+    brokenInfinity: false
+}
 let onCreate = function()
 {
     initialGame = functions.getSaveCode();
