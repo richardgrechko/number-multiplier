@@ -16,7 +16,7 @@ let update = function()
 	dt = dt1-dt2;
 	dt2 = Date.now();
 	tmp.points = tmp.points.mul(tmp.multiplier.pow(dt));
-	update()
+	requestAnimationFrame(update);
 }
 let onCreate = function()
 {
@@ -24,7 +24,7 @@ let onCreate = function()
 
 	functions.loadGame();
 
-	update();
+	requestAnimationFrame(update);
 }
 var app = new Vue({
 	el: "#app",
