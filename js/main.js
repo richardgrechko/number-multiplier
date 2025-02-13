@@ -21,7 +21,7 @@ let onCreate = function()
 
 	functions.loadGame();
 
-	requestAnimationFrame(functions.update);
+	requestAnimationFrame(update());
 }
 var app = new Vue({
 	el: "#app",
