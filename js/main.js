@@ -15,7 +15,7 @@ let update = function()
 	dt1 = Date.now();
 	dt = dt1-dt2;
 	dt2 = Date.now();
-	tmp.number = tmp.number.mul(tmp.multiplier.pow(dt));
+	tmp.number = tmp.number.multiply(tmp.multiplier.pow(dt));
 	update()
 }
 let onCreate = function()
