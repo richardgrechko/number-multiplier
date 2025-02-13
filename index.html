@@ -10,10 +10,13 @@
 </head>
 <body>
     <div id="app">
-        <main>
-            <p>Version: 1.1.2 β</p>
+        <main v-if="!gameWon">
+            <p>Version: 1.0.1 β</p>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(multiplier, 4, 2, 303)}}</span>/sec)</p>
+        </main>
+        <main v-else>
+            <span class="big">Congrats! You have beaten the game!</span>
         </main>
     </div>
 </body>
