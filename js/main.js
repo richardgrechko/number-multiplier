@@ -1,4 +1,4 @@
-let [dt, dt1, dt2] = Date.now();
+let dt = Date.now(), dt1 = Date.now(), dt2 = Date.now();
 function E(n)
 {
 	return new Decimal(n)
