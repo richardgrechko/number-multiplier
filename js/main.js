@@ -4,7 +4,7 @@ function E(n)
 	return new Decimal(n)
 }
 const tmp = {
-	number: E(1),
+	points: E(1),
 	multiplier: E(1.01),
 	infinities: E(0),
 	brokenInfinity: false,
