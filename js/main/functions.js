@@ -72,6 +72,6 @@ let functions = {
 	},
 	getMultiplier: function()
 	{
-		return game.upgrades.apply()
+		return game.upgrades.multiplier.apply()
 	}
 };
