@@ -70,5 +70,5 @@ let functions = {
 		}
 		return e;
 	},
-	getMultiplier: () => game.multiplier.mul(game.upgrades[1].multiplier)
+	getMultiplier: () => game.upgrades[1].multiplier
 };
