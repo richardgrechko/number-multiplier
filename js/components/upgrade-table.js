@@ -8,5 +8,5 @@ Vue.component("upgrade-table", {
 		totalProduction: () => functions.getMultiplier()
         },
 	template: `<upgrade v-for="(u, i) in upgrades" :upgrades="u" :key="i">
-<h2>Your total multiplier is {{formatNumber(totalProduction, 2, 2, 303)}}</h2>`
+<div class="big">Your total multiplier is {{formatNumber(totalProduction, 2, 2, 303)}}</div>`
 });
