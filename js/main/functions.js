@@ -69,5 +69,6 @@ let functions = {
 			e = "-" + functions.formatNumber(n.negate(), prec, prec1000, lim)
 		}
 		return e;
-	}
+	},
+	getMultiplier: () => game.multiplier.mul(game.upgrades[1].multiplier)
 };
