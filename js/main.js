@@ -1,4 +1,4 @@
-let dt, dt1, dt2;
+let [dt, dt1, dt2] = Date.now();
 function E(n)
 {
 	return new Decimal(n)
@@ -12,8 +12,11 @@ const tmp = {
 }
 let update = function()
 {
+	dt1 = Date.now();
+	dt = dt1-dt2;
+	dt2 = Date.now();
 	tmp.number = tmp.number.mul(tmp.multiplier.pow(0.016));
-	requestAnimationFrame(update());
+	update()
 }
 let onCreate = function()
 {
