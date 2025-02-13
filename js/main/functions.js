@@ -36,8 +36,8 @@ let functions = {
 	abbreviate: function(n)
 	{
 		let abbrevs = 
-		[["K","M","B","T","Qd","Qn","Sx,"Sp","Oc","No"],
-		 ["", "U","D","T","Qd","Qn","Sx,"Sp","Oc","No"],
+		[["K","M","B","T","Qd","Qn","Sx","Sp","Oc","No"],
+		 ["", "U","D","T","Qd","Qn","Sx","Sp","Oc","No"],
 		 ["", "De","Vg","Tg","Qdg","Qng","Sxg","Spg,"Ocg","Nog"]],
 		a = "";
 		n = E(n).floor();
