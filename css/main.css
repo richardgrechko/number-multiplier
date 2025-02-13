@@ -3,9 +3,19 @@ html {
   color: white;
   font-size: 24px;
 }
-span.big {
+.big {
   background-color: black;
   color: white;
   font-size: 32px;
   font-weight: bold;
+}
+button {
+  background-color: #aaa;
+  width: 150px;
+  height: 100px;
+}
+button:disabled {
+  background-color: #777;
+  width: 150px;
+  height: 100px;
 }
