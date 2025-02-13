@@ -1,4 +1,4 @@
-let dt = Date.now(), dt1 = Date.now(), dt2 = Date.now();
+let dt1 = Date.now(), dt2 = Date.now();
 function E(n)
 {
 	return new Decimal(n)
@@ -20,7 +20,7 @@ const game = {
 let update = function()
 {
 	dt1 = Date.now();
-	dt = dt1-dt2;
+	let dt = (dt1-dt2)/1000;
 	dt2 = Date.now();
 	game.points = game.points.mul(game.gain.pow(dt));
 	if (game.points.gte(Number.MAX_VALUE))
