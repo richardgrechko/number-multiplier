@@ -28,11 +28,6 @@ let functions = {
 			tmp.multiplier = loadVal(E(obj.multiplier), E(1.01));
 		}
 	},
-	update: function()
-	{
-		tmp.number = tmp.number.mul(tmp.multiplier.pow(0.016));
-		requestAnimationFrame(functions.update());
-	},
 	abbreviate: function(n)
 	{
 		let abbrevs = 
