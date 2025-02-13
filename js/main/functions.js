@@ -70,8 +70,8 @@ let functions = {
 		}
 		return e;
 	},
-	getMultiplier: () => game.upgrades[0].multiplier
-		.mul(game.upgrades[1].multiplier)
-		.mul(game.upgrades[2].multiplier)
-		.mul(game.upgrades[3].multiplier)
+	getMultiplier: function()
+	{
+		return game.upgrades.multiplier.apply()
+	}
 };
