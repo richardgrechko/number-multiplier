@@ -10,8 +10,7 @@ class Upgrade
 	}
 	getMultiplier()
 	{
-		let base = this.multiplier.pow(this.level).mul(game.multiplier).mul(E(2).pow(game.infinities));
-		let power = base;
+		return functions.getMultiplier()
 	}
 	getPrice()
 	{
