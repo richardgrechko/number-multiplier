@@ -7,8 +7,8 @@ Vue.component("tab-navigation",{
         maxAll: () => functions.maxAll(),
     },
     template: `<div class="tab-navigation">
-    <tab-button @click="selectTab('main')">Main</tab-button>
-    <tab-button @click="selectTab('upgrades')">Upgrades</tab-button>
+    <button class="tab-button" @click="selectTab('main')">Main</button>
+    <button class="tab-button" @click="selectTab('upgrades')">Upgrades</button>
     <button @click="maxAll()">Max All</button>
 </div>`
 })
