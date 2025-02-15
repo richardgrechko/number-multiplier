@@ -6,6 +6,7 @@ const game = {
 	points: E(1),
 	softcapRoot: E(1),
 	softcapWeaken: E(1),
+	getInfinities: E(0),
 	pointsAreInfinite: false,
 	multiplier: E(1.01),
 	gain: E(1),
