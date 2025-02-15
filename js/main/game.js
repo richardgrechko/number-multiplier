@@ -1,3 +1,7 @@
+let E = function(n)
+{
+	return new Decimal(n)
+}
 const game = {
 	points: E(1),
 	softcapRoot: E(1),
