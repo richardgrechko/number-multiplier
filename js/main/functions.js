@@ -38,11 +38,11 @@ let functions = {
 		n = E(n).floor();
 		if (n.gt(10))
 		{
-			a = abbrevs[1][n.sub(1).mod(10)] + abbrevs[2][n.div(10).sub(1).floor()]
+			a = abbrevs[1][n.mod(10)] + abbrevs[2][n.div(10).floor()]
 		}
 		else
 		{
-			a = abbrevs[0][n.sub(1)]
+			a = abbrevs[0][n]
 		}
 		return a
 	},
