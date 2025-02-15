@@ -10,7 +10,7 @@ class Upgrade
 	}
 	getMultiplier()
 	{
-		return functions.getMultiplier()
+		return this.multiplier.pow(this.level)
 	}
 	getPrice()
 	{
