@@ -15,7 +15,7 @@
             <tab-navigation class="center" ref="tabNavigation"></tab-navigation>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
-            <main v-if="pointsAreInfinite && game.softcapRoot.gte(1)">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</main>
+            <main v-if="pointsAreInfinite && softcapRoot.gte(1)">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</main>
             <main v-if="settings.tab === 'main'">
                 <main style="color: #e94" v-if="infinities.gte(1)">{{infinities}}∞</main>
                 <main style="color: #4e9" v-if="eternities.gte(1)">{{eternities}}∑</main>
