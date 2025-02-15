@@ -36,9 +36,9 @@ let functions = {
 		 ["", "De","Vg","Tg","Qdg","Qng","Sxg","Spg","Ocg","Nog"]],
 		a = "";
 		n = E(n).floor();
-		if (n.gt(10))
+		if (n.gt(9))
 		{
-			a = abbrevs[1][n.mod(10)] + abbrevs[2][n.add(1).div(10).floor()]
+			a = abbrevs[1][n.mod(10)] + abbrevs[2][n.div(10).floor()]
 		}
 		else
 		{
