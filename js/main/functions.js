@@ -86,7 +86,7 @@ let functions = {
 	},
 	infinite: function()
 	{
-		if (game.number.gte(Number.MAX_VALUE))
+		if (game.points.gte(Number.MAX_VALUE))
 		{
 			game.infinities = game.infinities.add(game.getInfinities);
 			game.points = E(1);
