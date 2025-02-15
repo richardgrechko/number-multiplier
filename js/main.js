@@ -32,6 +32,10 @@ let update = function()
 	{
 		game.gain = game.multiplier
 	}
+	if (game.points.eq(Decimal.NaN))
+	{
+		game.points = E(1)
+	}
 	requestAnimationFrame(update);
 }
 let onCreate = function()
