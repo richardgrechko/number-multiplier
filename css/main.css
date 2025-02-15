@@ -15,20 +15,20 @@ html {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
-.big {
+#big {
   background-color: black;
   color: white;
   font-size: 32px;
   font-weight: bold;
 }
-.tab-button {
+#tab-button {
   font-size: 15px;
   background-color: #088;
   color: #0ff;
   width: 100px;
   height: 40px;
 }
-.break-inf-button {
+#break-inf-button {
   font-size: 15px;
   background-color: #840;
   color: #f80;
@@ -38,7 +38,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-.infinite-button {
+#infinite-button {
   font-size: 15px;
   background-color: #a50;
   color: #f80;
