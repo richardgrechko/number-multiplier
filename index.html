@@ -14,6 +14,7 @@
             <p>Version: 1.0.1 β</p>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(multiplier, 4, 2, 303)}}</span>/sec)</p>
+            <main v-if="pointsAreInfinite">Your points have been rooted by {{softcapRoot}} due to softcap!</main>
             <upgrade-table :upgrades="upgrades"></upgrade-table>
         </main>
         <main v-else>
