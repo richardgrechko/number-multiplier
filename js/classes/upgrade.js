@@ -5,7 +5,7 @@ class Upgrade
 		this.name = name;
 		this.price = price;
 		this.priceIncrease = priceIncrease;
-		this.multiplier = multiplier;
+		this.multiplier = E(1);
 		this.level = 0;
 	}
 	getMultiplier()
