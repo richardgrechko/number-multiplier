@@ -1,6 +1,6 @@
 let functions = {
 	getSaveCode: function() {
-		return btoa(unescape(encodeURIComponent(JSON.stringify(tmp))));
+		return btoa(unescape(encodeURIComponent(JSON.stringify(game))));
 	},
 	saveGame: function(){
 		let str = getSaveCode();
@@ -24,8 +24,8 @@ let functions = {
 				alert("Error loading Game: " + e);
 				return;
 			}
-			tmp.number = loadVal(E(obj.number), E(1));
-			tmp.multiplier = loadVal(E(obj.multiplier), E(1.01));
+			game.points = loadVal(E(obj.points), E(1));
+			game.multiplier = loadVal(E(obj.multiplier), E(1.01));
 		}
 	},
 	abbreviate: function(n)
