@@ -29,12 +29,14 @@ html {
   height: 40px;
 }
 button {
+  font-family: "Typewriter", Helvetica, Arial, sans-serif;
   background-color: #aaa;
   color: #fff;
   width: 150px;
   height: 100px;
 }
 button:disabled {
+  font-family: "Typewriter", Helvetica, Arial, sans-serif;
   background-color: #777;
   color: #ccc;
   width: 150px;
