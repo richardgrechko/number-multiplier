@@ -28,6 +28,13 @@ html {
   width: 100px;
   height: 40px;
 }
+.break-inf-button {
+  font-size: 10px;
+  background-color: #840;
+  color: #f80;
+  width: 100px;
+  height: 40px;
+}
 button {
   font-family: "Typewriter", Helvetica, Arial, sans-serif;
   background-color: #aaa;
