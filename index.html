@@ -22,7 +22,7 @@
                     <main v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></main>
                     <main v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></main>
                 </main>
-                <main v-if="brokenInfinity && game.points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{getInfinities}}</button></main>
+                <main v-if="brokenInfinity && game.points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button></main>
                 <main style="color: #e94" v-if="infinities.gte(1)">{{infinities}}∞</main>
                 <main style="color: #4e9" v-if="eternities.gte(1)">{{eternities}}∑</main>
                 <main style="color: #94e" v-if="realities.gte(1)">{{realities}} Realities</main>
