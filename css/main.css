@@ -22,14 +22,14 @@ html {
   font-weight: bold;
 }
 .tab-button {
-  font-size: 10px;
+  font-size: 20px;
   background-color: #088;
   color: #0ff;
   width: 100px;
   height: 40px;
 }
 .break-inf-button {
-  font-size: 10px;
+  font-size: 20px;
   background-color: #840;
   color: #f80;
   width: 100px;
@@ -39,7 +39,7 @@ html {
   align-items: center;
 }
 .infinite-button {
-  font-size: 10px;
+  font-size: 20px;
   background-color: #a50;
   color: #f80;
   width: 100px;
