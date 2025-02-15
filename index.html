@@ -11,8 +11,8 @@
 <body>
     <div id="app">
         <main v-if="!gameWon">
-            <tab-button @click="settings.tab = 'main'>Main</tab-button>
-            <tab-button @click="settings.tab = 'upgrades'>Upgrades</tab-button>
+            <tab-button onclick="settings.tab = 'main'">Main</tab-button>
+            <tab-button onclick="settings.tab = 'upgrades'">Upgrades</tab-button>
             <p>Version: 1.0.1 β</p>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
