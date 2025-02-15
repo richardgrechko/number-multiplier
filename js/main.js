@@ -7,7 +7,7 @@ let update = function()
 	game.points = game.points.mul(game.gain.pow(dt));
 	game.multiplier = functions.getMultiplier().mul(1.01).mul(E(2).pow(game.infinities)).mul(E(1024).pow(game.eternities)).mul(E(Number.MAX_VALUE).pow(game.realities))
 	game.softcapRoot = game.points.log10().div(E(2).log10()).sub(1023).div(game.softcapWeaken);
-	if (game.points.gte(Number.MAX_VALUE))
+	if (game.points.gte(Number.MAX_VALUE) && game.softcapRoot.gte(1))
 	{
 		game.pointsAreInfinite = true;
 		game.gain = game.multiplier.pow(E(1).div(game.softcapRoot))
