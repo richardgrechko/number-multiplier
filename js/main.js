@@ -11,13 +11,15 @@ const game = {
 	multiplier: E(1.01),
 	gain: E(1),
 	upgrades: [
-		new Upgrade("A little increase", E(1), E(1.1), E(1.01)),
+		new Upgrade("A little increase", E(1.2), E(1.1), E(1.01)),
 		new Upgrade("Increasing!", E(1.5), E(1.2), E(1.1)),
 		new Upgrade("Quickly Growing", E(16), E(4), E(2)),
 		new Upgrade("What?", E(1048576), E(4096), E(128)),
 	],
 	infinities: E(0),
 	brokenInfinity: false,
+	eternities: E(0),
+	realities: E(0),
 	gameWon: false,
 }
 let update = function()
@@ -26,7 +28,7 @@ let update = function()
 	dt = (dt1-dt2)/1000;
 	dt2 = Date.now();
 	game.points = game.points.mul(game.gain.pow(dt));
-	game.multiplier = functions.getMultiplier().mul(E(2).pow(game.infinities))
+	game.multiplier = functions.getMultiplier().mul(1.01).mul(E(2).pow(game.infinities)).mul(E(1024).pow(game.eternities)).mul(E(Number.MAX_VALUE).pow(game.realities))
 	game.softcapRoot = game.points.log10().div(E(2).log10()).sub(1024).div(game.softcapWeaken);
 	if (game.points.gte(Number.MAX_VALUE))
 	{
