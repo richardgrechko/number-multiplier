@@ -24,14 +24,14 @@ tab-button {
 button {
   font-family: sans-serif;
   background-color: #aaa;
-  color: #ccc;
+  color: #fff;
   width: 150px;
   height: 100px;
 }
 button:disabled {
   font-family: sans-serif;
   background-color: #777;
-  color: #aaa;
+  color: #ccc;
   width: 150px;
   height: 100px;
 }
