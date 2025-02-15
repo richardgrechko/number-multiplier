@@ -4,10 +4,11 @@
     url("../fonts/monospacetypewriter-webfont.woff") format("woff"),
     url("../fonts/monospacetypewriter-webfont.woff2") format("woff2");
 }
-html {
+*, body, html {
   background-color: black;
   color: white;
   font-size: 24px;
+  font-family: "Typewriter", Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
