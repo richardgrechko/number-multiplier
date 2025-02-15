@@ -23,9 +23,9 @@
                     <main v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></main>
                 </main>
                 <main v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button></main>
-                <main style="color: #e94" v-if="infinities.gte(1)">{{infinities}}∞</main>
-                <main style="color: #4e9" v-if="eternities.gte(1)">{{eternities}}∑</main>
-                <main style="color: #94e" v-if="realities.gte(1)">{{realities}} Realities</main>
+                <main style="color: #e94" v-if="infinities.gte(1)">{{formatNumber(infinities, 4, 2, 303)}}∞</main>
+                <main style="color: #4e9" v-if="eternities.gte(1)">{{formatNumber(eternities, 4, 2, 303)}}∑</main>
+                <main style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</main>
             </main>
             <main v-if="settings.tab === 'upgrades'">
                 <upgrade-table :upgrades="upgrades"></upgrade-table>
