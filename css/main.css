@@ -2,6 +2,11 @@ html {
   background-color: black;
   color: white;
   font-size: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 .big {
   background-color: black;
