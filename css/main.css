@@ -16,10 +16,11 @@ html {
 }
 .tab-button {
   font-family: sans-serif;
+  font-size: 20px;
   background-color: #088;
   color: #0ff;
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 40px;
 }
 button {
   font-family: sans-serif;
