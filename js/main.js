@@ -1,8 +1,4 @@
 let dt1 = Date.now(), dt2 = Date.now(), dt;
-let E = function(n)
-{
-	return new Decimal(n)
-}
 let update = function()
 {
 	dt1 = Date.now();
