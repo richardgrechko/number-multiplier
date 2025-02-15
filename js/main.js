@@ -21,6 +21,10 @@ let update = function()
 	{
 		game.points = E(1)
 	}
+	if (!game.brokenInfinity)
+	{
+		game.infinities = game.infinities.add(1)
+	}
 	requestAnimationFrame(update);
 }
 let onCreate = function()
