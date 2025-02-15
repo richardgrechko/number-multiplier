@@ -76,5 +76,12 @@ let functions = {
 		.mul(game.upgrades[1].getMultiplier())
 		.mul(game.upgrades[2].getMultiplier())
 		.mul(game.upgrades[3].getMultiplier())
-	}
+	},
+	maxAll: function()
+	{
+		for (let i = 0; i < game.upgrades.length; i++)
+		{
+			game.upgrades[i].buyMax();
+		}
+	},
 };
