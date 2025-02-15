@@ -4,7 +4,7 @@
     url("../fonts/monospacetypewriter-webfont.woff") format("woff"),
     url("../fonts/monospacetypewriter-webfont.woff2") format("woff2");
 }
-*, body, html {
+html {
   background-color: black;
   color: white;
   font-size: 24px;
