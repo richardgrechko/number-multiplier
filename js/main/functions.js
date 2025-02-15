@@ -88,7 +88,7 @@ let functions = {
 	{
 		if (game.number.gte(Number.MAX_VALUE))
 		{
-			game.infinities = game.infinities.add(E(16).pow(game.points.log10().div(E(Number.MAX_VALUE).log10())));
+			game.infinities = game.infinities.add(game.getInfinities);
 			game.points = E(1);
 			return true;
 		}
