@@ -34,6 +34,19 @@ html {
   color: #f80;
   width: 100px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infinite-button {
+  font-size: 10px;
+  background-color: #a50;
+  color: #f80;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button {
   font-family: "Typewriter", Helvetica, Arial, sans-serif;
