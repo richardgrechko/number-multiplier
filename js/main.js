@@ -6,6 +6,7 @@ function E(n)
 const game = {
 	points: E(1),
 	softcapRoot: E(1),
+	softcapWeaken: E(1),
 	pointsAreInfinite: false,
 	multiplier: E(1.01),
 	gain: E(1),
@@ -26,11 +27,11 @@ let update = function()
 	dt2 = Date.now();
 	game.points = game.points.mul(game.gain.pow(dt));
 	game.multiplier = functions.getMultiplier().mul(E(2).pow(game.infinities))
-	game.softcapRoot = game.points.log10().div(E(2).log10()).sub(1024);
+	game.softcapRoot = game.points.log10().div(E(2).log10()).sub(1024).div(game.softcapWeaken);
 	if (game.points.gte(Number.MAX_VALUE))
 	{
 		game.pointsAreInfinite = true;
-		game.gain = game.multiplier.pow(E(1).div(game.points.log10().div(E(2).log10()).sub(1024)))
+		game.gain = game.multiplier.pow(E(1).div(game.points.log10().div(E(2).log10()).sub(1024).div(game.softcapWeaken)))
 	}
 	else
 	{
