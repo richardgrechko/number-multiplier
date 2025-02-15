@@ -21,6 +21,9 @@ const game = {
 	eternities: E(0),
 	realities: E(0),
 	gameWon: false,
+	settings: {
+		tab: "main"
+	}
 }
 let update = function()
 {
