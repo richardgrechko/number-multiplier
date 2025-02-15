@@ -23,7 +23,7 @@ class Upgrade
 	{
 		if(this.getPrice().lt(game.points))
 		{
-			game.points = game.points.div(this.getPrice);
+			game.points = game.points.div(this.getPrice());
 			this.level++;
 			return true;
 		}
