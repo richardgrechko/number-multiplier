@@ -21,7 +21,7 @@ let update = function()
 	{
 		game.points = E(1)
 	}
-	if (!game.brokenInfinity)
+	if (!game.brokenInfinity && game.number.gte(Number.MAX_VALUE))
 	{
 		game.infinities = game.infinities.add(1)
 	}
