@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Typewriter";
+    src: url("../fonts/MonospaceTypewriter.ttf") format("ttf"),
+    url("../fonts/monospacetypewriter-webfont.woff") format("woff"),
+    url("../fonts/monospacetypewriter-webfont.woff2") format("woff2");
+}
 html {
   background-color: black;
   color: white;
