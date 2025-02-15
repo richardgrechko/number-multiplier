@@ -24,7 +24,7 @@ let update = function()
 	dt2 = Date.now();
 	game.points = game.points.mul(game.gain.pow(dt));
 	game.multiplier = functions.getMultiplier().mul(E(2).pow(game.infinities))
-	if (game.points.gte(Number.MAX_VALUE))
+	if (game.points.lte(Number.MAX_VALUE))
 	{
 		game.gain = game.multiplier.pow(E(1).div(game.points.log10().div(E(2).log10()).sub(1024)))
 	}
