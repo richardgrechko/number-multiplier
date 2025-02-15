@@ -11,14 +11,18 @@
 <body>
     <div id="app">
         <main v-if="!gameWon">
-            <p>Version: 1.0.1 β</p>
-            <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
-            <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
-            <main v-if="pointsAreInfinite">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</main>
-            <upgrade-table :upgrades="upgrades"></upgrade-table>
+            <main v-if="settings.tab === 'main'">
+                <p>Version: 1.0.1 β</p>
+                <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
+                <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
+                <main v-if="pointsAreInfinite">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</main>
+            </main>
+            <main v-if="settings.tab === 'upgrades'">
+                <upgrade-table :upgrades="upgrades"></upgrade-table>
+            </main>
         </main>
         <main v-else>
-            <span class="big">Congrats! You have beaten the game!</span>
+            <span class="big">Congrats! You won the game!</span>
         </main>
     </div>
 </body>
