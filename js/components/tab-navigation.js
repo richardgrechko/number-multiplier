@@ -9,6 +9,6 @@ Vue.component("tab-navigation",{
     template: `<div class="tab-navigation">
     <button class="tab-button" @click="selectTab('main')">Main</button>
     <button class="tab-button" @click="selectTab('upgrades')">Upgrades</button>
-    <button @click="maxAll()">Max All</button>
+    <button class="tab-button" @click="maxAll()">Max All</button>
 </div>`
 })
