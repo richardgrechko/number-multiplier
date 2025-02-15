@@ -4,7 +4,7 @@
 - Added Break Infinity and Infinite buttons
 - Renamed What? to Skyrocketing
 - Changed formulae of upgrades
-- Fixed bugs
+- Bugfix
 ## 1.0.1 Beta
 - Added softcap and upgrades
 ## 1.0.0 Beta
