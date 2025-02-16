@@ -32,7 +32,7 @@
                 <upgrade-table :upgrades="upgrades"></upgrade-table>
             </main>
         </main>
-        <main v-else>
+        <main v-if="gameWon">
             <span class="big">Congrats! You won the game!</span>
         </main>
     </div>
