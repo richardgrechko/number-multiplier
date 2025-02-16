@@ -11,6 +11,7 @@
 <body>
     <div id="app">
         <main v-if="!gameWon">
+            <p>Please do <div class="big" style="color:#F20">NOT</div> base anything on here.</p>
             <p>Version: 1.0.2 β</p>
             <tab-navigation class="center" ref="tabNavigation"></tab-navigation>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
@@ -22,7 +23,7 @@
                     <main v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></main>
                     <main v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></main>
                 </main>
-                <main v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><main v-if="infinities.gte(128) || eternities.gte(1) || realities.gte(1)"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></main><main v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></main></main>
+                <main v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><main v-if="!autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></main><main v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></main><main v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><main>1</main></main>
                 <main style="color: #e94" v-if="infinities.gte(1)">{{formatNumber(infinities, 4, 2, 303)}}∞</main>
                 <main style="color: #4e9" v-if="eternities.gte(1)">{{formatNumber(eternities, 4, 2, 303)}}∑</main>
                 <main style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</main>
