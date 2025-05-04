@@ -1,6 +1,6 @@
 Vue.component("tab-navigation",{
     methods:{
-        selectTab: function(t)
+        selectTab(t)
         {
             game.settings.tab = t;
         },
