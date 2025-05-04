@@ -10,9 +10,9 @@
 </head>
 <body>
     <div id="app">
+        <p>Please do <span class="big" style="color:#F20">NOT</span> base anything on here.</p>
+        <p>Version: 1.0.2 β</p>
         <main v-if="gameWon == false">
-            <p>Please do <span class="big" style="color:#F20">NOT</span> base anything on here.</p>
-            <p>Version: 1.0.2 β</p>
             <tab-navigation class="center" ref="tabNavigation"></tab-navigation>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
@@ -23,7 +23,7 @@
                     <div v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></div>
                     <div v-else><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></div>
                 </div>
-                <div v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><div v-if="!autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></div><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></main><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><div>1</div></div></div></div>
+                <div v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><div v-if="!autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></div><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></div><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><div>1</div></div>
                 <div style="color: #e94" v-if="infinities.gte(1)">{{formatNumber(infinities, 4, 2, 303)}}∞</div>
                 <div style="color: #4e9" v-if="eternities.gte(1)">{{formatNumber(eternities, 4, 2, 303)}}∑</div>
                 <div style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</div>
