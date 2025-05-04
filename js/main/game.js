@@ -18,6 +18,7 @@ const game = {
 	],
 	infinities: E(0),
 	brokenInfinity: false,
+	autoInfinity: false,
 	eternities: E(0),
 	realities: E(0),
 	gameWon: false,
