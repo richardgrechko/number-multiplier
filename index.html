@@ -16,21 +16,21 @@
             <tab-navigation class="center" ref="tabNavigation"></tab-navigation>
             <p>You have <span class="big">{{formatNumber(points, 4, 2, 303)}}</span> points.</p>
             <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
-            <main v-if="pointsAreInfinite && softcapRoot.gte(1)">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</main>
-            <main v-if="settings.tab === 'main'">
-                <main v-if="infinities.lt(16)"><button class="break-inf-button">Disabled</button></main>
-                <main v-if="infinities.gte(16)">
-                    <main v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></main>
-                    <main v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></main>
-                </main>
-                <main v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><main v-if="!autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></main><main v-if="autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></main><main v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><main>1</main></main>
-                <main style="color: #e94" v-if="infinities.gte(1)">{{formatNumber(infinities, 4, 2, 303)}}∞</main>
-                <main style="color: #4e9" v-if="eternities.gte(1)">{{formatNumber(eternities, 4, 2, 303)}}∑</main>
-                <main style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</main>
-            </main>
-            <main v-if="settings.tab === 'upgrades'">
+            <div v-if="pointsAreInfinite && softcapRoot.gte(1)">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</div>
+            <div v-if="settings.tab === 'main'">
+                <div v-if="infinities.lt(16)"><button class="break-inf-button">Disabled</button></main>
+                <div v-if="infinities.gte(16)">
+                    <div v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></div>
+                    <div v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></div>
+                </div>
+                <div v-if="brokenInfinity && points.gte('1.798e308')"><button class="break-inf-button" @click="infinite()">Infinite for {{formatNumber(getInfinities, 4, 2, 303)}}</button><div v-if="!autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: OFF</button></div><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(0) || realities.gte(0))"><button class="break-inf-button" @click="autoInfinity = !autoInfinity">Auto: ON</button></main><div v-if="autoInfinity && (infinities.gte(128) || eternities.gte(1) || realities.gte(1))"><div>1</div></div></div></div>
+                <div style="color: #e94" v-if="infinities.gte(1)">{{formatNumber(infinities, 4, 2, 303)}}∞</div>
+                <div style="color: #4e9" v-if="eternities.gte(1)">{{formatNumber(eternities, 4, 2, 303)}}∑</div>
+                <div style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</div>
+            </div>
+            <div v-if="settings.tab === 'upgrades'">
                 <upgrade-table :upgrades="upgrades"></upgrade-table>
-            </main>
+            </div>
         </main>
         <main v-if="gameWon">
             <span class="big">Congrats! You won the game!</span>
