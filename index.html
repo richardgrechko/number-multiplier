@@ -18,7 +18,7 @@
             <p>(×<span class="big">{{formatNumber(gain, 4, 2, 303)}}</span>/sec)</p>
             <div v-if="pointsAreInfinite && softcapRoot.gte(1)">Your points have been rooted by {{formatNumber(softcapRoot, 4, 2, 303)}} due to softcap!</div>
             <div v-if="settings.tab === 'main'">
-                <div v-if="infinities.lt(16)"><button class="break-inf-button">Disabled</button></main>
+                <div v-if="infinities.lt(16)"><button class="break-inf-button">Disabled</button></div>
                 <div v-if="infinities.gte(16)">
                     <div v-if="!brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Break Infinity</button></div>
                     <div v-if="brokenInfinity"><button class="break-inf-button" @click="brokenInfinity = !brokenInfinity">Fix Infinity</button></div>
