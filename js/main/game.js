@@ -10,12 +10,12 @@ const game = {
 	pointsAreInfinite: false,
 	multiplier: E(1.01),
 	gain: E(1),
-	upgrades: [
-		new Upgrade("1", E(1.2), E(1.05), E(1.01)),
-		new Upgrade("2", E(1.5), E(1.5), E(1.1)),
-		new Upgrade("3", E(16), E(16), E(2)),
-		new Upgrade("why does this exist", E(1048576), E(65536), E(128)),
-	],
+	upgrades: {
+		increaseMultiplier: new Upgrade("Increase Multiplier", E(1.2), E(1.05), E(1.01)),
+		moreMulti: new Upgrade("More Multiplier", E(1.5), E(1.5), E(1.1)),
+		exponentialGrowth: new Upgrade("Exponential Growth", E(16), E(16), E(2)),
+		d: new Upgrade("[unk]", E(1048576), E(65536), E(128)),
+	},
 	infinities: E(0),
 	brokenInfinity: false,
 	autoInfinity: false,
