@@ -80,8 +80,7 @@ let functions = {
 	},
 	maxAll: function()
 	{
-		for (let i = 0; i < game.upgrades.length; i++)
-		{
+		for (let i in game.upgrades) {
 			game.upgrades[i].buyMax();
 		}
 	},
