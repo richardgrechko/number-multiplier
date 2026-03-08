@@ -1,4 +1,4 @@
-Vue.component("upgrade-table", {
+Vue.component("upgrade-container", {
 	props: ["upgrades"],
 	methods: {
 		formatNumber: (n, prec, prec1000, lim) => functions.formatNumber(n, prec, prec1000, lim)
