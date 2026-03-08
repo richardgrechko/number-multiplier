@@ -72,10 +72,11 @@ let functions = {
 	},
 	getMultiplier: function()
 	{
-		return game.upgrades[0].getMultiplier()
-		.mul(game.upgrades[1].getMultiplier())
-		.mul(game.upgrades[2].getMultiplier())
-		.mul(game.upgrades[3].getMultiplier())
+		let result = new Decimal(1);
+		for (let i in game.upgrades) {
+			result = result.mul(game.upgrades[i].getMultiplier())
+		}
+		return result
 	},
 	maxAll: function()
 	{
