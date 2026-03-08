@@ -14,6 +14,7 @@ html {
   align-items: center;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  text-align: center;
 }
 .big {
   background-color: black;
@@ -61,4 +62,21 @@ button:disabled {
   color: #ccc;
   width: 150px;
   height: 100px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  width: 100vw;
+  min-height: 30px;
+  border: 2px solid #202040;
+  border-style: none none solid none;
+  background-image: linear-gradient(to bottom, #000000, #202040)
 }
