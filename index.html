@@ -29,7 +29,7 @@
                 <div style="color: #94e" v-if="realities.gte(1)">{{formatNumber(realities, 4, 2, 303)}} Realities</div>
             </div>
             <div v-if="settings.tab === 'upgrades'">
-                <upgrade-table :upgrades="upgrades"></upgrade-table>
+                <upgrade-container :upgrades="upgrades"></upgrade-container>
             </div>
         </main>
         <main v-else>
